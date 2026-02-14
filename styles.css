@@ -1,0 +1,298 @@
+/*
+author: allison r. 
+date last modified: feb 14, 2026
+*/
+
+
+
+/* ===== Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Courier Prime", monospace;
+  font-style: normal;
+  line-height: 1.6;
+  color: #1D1C1B;
+  background: #FDF3E6;
+  
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+
+
+
+/* ===== Utility ===== */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 12px;
+  background: #FCC98A;
+  color: #1D1C1B;
+  border: 0.5px solid #1D1C1B;
+  cursor: pointer;
+  margin-top: 16px;
+  border-radius: 4px;
+  transition: 0.3s ease;
+  
+  font-family: "Courier Prime", monospace;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16.5pt;
+}
+
+.btn:hover {
+  background: #FCDAAF;
+}
+
+
+
+
+/* ===== Header ===== */
+.header {
+  background: #768E7833;
+  border-bottom: 0.5px solid #1D1C1B;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px 8px;
+  gap: 12px;
+}
+
+
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #1D1C1B;
+}
+
+.nav-links a:hover {
+  color: #B56032;
+  font-weight: 600;
+  text-decoration: underline #B56032;
+}
+
+.logo-main {
+  height: clamp(48px, 5vw, 62px);
+  width: auto;
+}
+
+
+
+
+/* ===== Hero ===== */
+.hero {
+  padding: 64px 0;
+  text-align: left;
+  background: #FDF3E6;
+}
+
+.hero-content {
+    max-width: 888px;
+}
+
+
+
+
+/* ===== Features ===== */
+.features {
+  display: grid;
+  gap: 24px;
+  padding: 48px 0;
+  grid-template-columns: 1fr;
+}
+
+.card {
+  background: #EBDFC1;
+  border-radius: 8px;
+  border: 0.5px solid #1D1C1B;
+  overflow: hidden;
+  
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+    
+  display: flex;
+  flex-direction: column;
+}
+
+.card-img {
+    width: 100%;
+    max-height: 452px;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    display: block; 
+}
+
+.card-content {
+    border-top 0.5px solid #1D1C1B;
+    padding: 12px;
+}
+
+
+
+
+/* ===== Project Table ===== */
+.table-section {
+    padding: 48px 0;
+}
+
+.table-scrollbox {
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+    max-height: 400px;
+    overflow-y: auto;
+    border-radius: 8px;
+    border: 0.5px solid #1D1C1B;
+}
+
+.responsive-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.responsive-table thead {
+  position: sticky;
+  top: 0;
+  background: #EBDFC1;
+  z-index: 1;
+  box-shadow: 0 1px 0  #1D1C1B;
+}
+
+.responsive-table th {
+    padding: 24px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.responsive-table td {
+    padding: 24px;
+    border-top: 0.5px solid #1D1C1B;
+    text-align: center;
+    white-space: normal;
+}
+
+.responsive-table tbody tr:hover {
+  background: #E9989777;
+}
+
+/* use nth-child to target columns with selector td */
+.responsive-table th, .responsive-table td:nth-child(1),
+.responsive-table td:nth-child(2) {
+  text-align: center;
+}
+
+.responsive-table td:nth-child(3) {
+  text-align: left;
+}
+
+/* use nth-child to target specific cells with selectors tr and td */
+.responsive-table tbody tr:nth-child(2) td:nth-child(1) {
+  white-space: nowrap;
+}
+
+.responsive-table a {
+  text-decoration: none;
+  color: #1D1C1B;
+}
+
+.responsive-table a:hover {
+  color: #B56032;
+  font-weight: 600;
+  text-decoration: underline #B56032;
+}
+
+
+
+
+
+/* ===== Footer ===== */
+.footer {
+  background: #768E7833;
+  color: #1D1C1B;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  width: 100%;
+  padding: 64px 0;
+  border-top: 0.5px solid #1D1C1B;
+  
+  margin-top: auto;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+
+    
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 8px 32px;
+    box-sizing: border-box;
+}
+
+
+
+
+/* ===== Desktop Styles ===== */
+@media (min-width: 768px) {
+  .nav {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+  }
+  .nav-links {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+
+  .features {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  
+  .footer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .footer-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+

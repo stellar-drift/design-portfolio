@@ -1,0 +1,20 @@
+# mac system files
+.DS_Store
+
+
+# linux
+.Trash-*
+
+
+# editor backups
+*~
+*.swp
+*.swo
+
+
+# logs
+*.log
+
+
+# dependency directories 
+node_modules/
