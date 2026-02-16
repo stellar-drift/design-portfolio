@@ -5,7 +5,19 @@ date last modified: feb 14, 2026
 
 
 
-const tableBody = document.querySelector(".responsive-table tbody");
+/*** VARIABLES ***/
+
+const tableBody = document.querySelector(".responsive-table tbody"); 
+
+const rows = document.querySelectorAll("#table tr");
+const cardImg = document.getElementById("card-img");
+const defaultImg = cardImg.src;
+const cardCaption = document.getElementById("card-caption");
+const defaultCaption = cardCaption.textContent;
+
+
+
+/*** PROJECT TABLE ***/
 
 // clear existing rows
 tableBody.innerHTML="";
@@ -39,4 +51,36 @@ projects.forEach(project => {
   tableBody.appendChild(tr);
   
   
+  // hover image events
+  tr.addEventListener("mouseenter", () => {
+    cardImg.src = project.image || defaultImg;
+    cardCaption.textContent = project.title;
+  });
+  tr.addEventListener("mouseleave", () => {
+    cardImg.src = defaultImg;
+  });
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
