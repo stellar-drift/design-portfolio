@@ -215,7 +215,6 @@ main {
 
 .responsive-table td:nth-child(3) {
   text-align: left;
-  white-space: nowrap;
 }
 
 /* use nth-child to target specific cells with selectors tr and td */
@@ -297,10 +296,6 @@ main {
     border-top: 0.5px solid #1D1C1B;
     text-align: center;
     white-space: normal;
-  }
-
-  .responsive-table td:nth-child(3) {
-    text-align: left;
   }
 
 
