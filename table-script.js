@@ -1,6 +1,6 @@
 /*
 author: allison r. 
-date last modified: feb 14, 2026
+date last modified: may 27, 2026
 */
 
 
@@ -14,7 +14,6 @@ const cardImg = document.getElementById("card-img");
 const defaultImg = cardImg.src;
 const cardCaption = document.getElementById("card-caption");
 const defaultCaption = cardCaption.textContent;
-
 
 
 /*** PROJECT TABLE ***/
@@ -58,6 +57,7 @@ projects.forEach(project => {
   });
   tr.addEventListener("mouseleave", () => {
     cardImg.src = defaultImg;
+    cardCaption.textContent = defaultCaption;
   });
 });
 
